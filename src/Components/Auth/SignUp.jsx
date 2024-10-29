@@ -1,24 +1,52 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { auth, authProvider } from "../../Firebase/Firebase";
+import { app } from "../../Firebase/Firebase";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isSignup, setisSignup] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setError('Please fill out all fields.');
+      setError("Please fill out all fields.");
       return;
     }
-    setError('');
-    // Handle sign-up logic here
+    setError("");
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      console.log("account created");
+      setisSignup(true);
+    } catch (error) {
+      setError(error.code);
+    }
   };
 
+  const GmailSignin = async (e) => {
+    e.preventDefault();
+
+    try {
+      await signInWithPopup(auth, authProvider);
+      console.log("account created");
+      setisSignup(true);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  if (isSignup) {
+    return <Navigate to={"/signin"} />;
+  }
+
   return (
-    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-      <div className="card" style={{ width: '400px' }}>
+    <div
+      className="container d-flex justify-content-center align-items-center"
+      style={{ minHeight: "100vh" }}>
+      <div className="card" style={{ width: "400px" }}>
         <div className="card-body">
           <h5 className="card-title text-center">Sign Up</h5>
           {error && <p className="text-danger text-center">{error}</p>}
@@ -43,8 +71,18 @@ function SignUp() {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary w-100 mb-3">Sign Up</button>
-            <Link to="/signin" className="btn btn-secondary w-100">Go to Sign In</Link>
+            <button type="submit" className="btn btn-primary w-100 mb-3">
+              Sign Up
+            </button>
+            <button
+              type="button"
+              onClick={GmailSignin}
+              className="btn btn-info w-100 mb-3">
+              Sign up with Google
+            </button>
+            <Link to="/signin" className="btn btn-secondary w-100">
+              Go to Sign In
+            </Link>
           </form>
         </div>
       </div>
