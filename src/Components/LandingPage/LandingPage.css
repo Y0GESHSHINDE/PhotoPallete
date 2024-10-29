@@ -1,0 +1,34 @@
+*{
+   padding: 0px;
+   margin: 0px;
+}
+
+#HeroSection{
+   min-height: 100%;
+   background-color: #480ca8;
+}
+
+#blob{
+   margin-top: 100px;
+   color: white;
+   font-family: "Merriweather", serif;
+   font-weight: 700;
+   font-style: normal;
+}
+#ok{
+   padding: 0px 30px;
+   color: white;
+}
+
+@media (max-width:991px){
+   #blob{
+      margin-top: 0px;
+   }
+   #ok{
+      padding: 0px 10px;
+   }
+}
+
+.navbar-toggler{
+   border-color: aliceblue;
+}
