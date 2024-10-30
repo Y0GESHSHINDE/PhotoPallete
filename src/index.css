@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Delius&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 * {
    margin: 0px;
    padding: 0px;
-   font-family: "Merriweather", serif;
-   font-weight: 600;
-   font-style: normal; 
+   font-family: "Playwrite GB S", cursive;
+   font-optical-sizing: auto;
+   font-weight: 700;
+   font-style: normal;
 }
 
 .divHeight {
