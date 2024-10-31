@@ -7,7 +7,6 @@
 ## 🔥 Features
 
 - **Upload Photos**: Easily upload images to Firebase Storage.
-- **Categorize Photos**: Organize uploaded photos into specific categories.
 - **Persistent Storage**: Photos and categories are stored in Firebase Firestore, enabling data persistence across sessions.
 
 ---
