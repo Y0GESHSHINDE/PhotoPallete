@@ -1,7 +1,6 @@
 
 # 📸 PhotoPallete
 
-PhotoPallete  is a photo categorization app that allows users to upload, organize, and delete photos within different categories. The app leverages Firebase for storage and database management, making it easy to perform CRUD operations on your photo collection.
 
 ---
 
@@ -10,7 +9,6 @@ PhotoPallete  is a photo categorization app that allows users to upload, organiz
 - **Upload Photos**: Easily upload images to Firebase Storage.
 - **Categorize Photos**: Organize uploaded photos into specific categories.
 - **Persistent Storage**: Photos and categories are stored in Firebase Firestore, enabling data persistence across sessions.
-- **Delete Photos**: Remove any image from both Firebase Storage and the database.
 
 ---
 
@@ -68,9 +66,7 @@ PhotoPallete  is a photo categorization app that allows users to upload, organiz
 
 ## 📸 Usage
 
-1. **Uploading Photos**: Select an image file and upload it to a category of your choice.
 2. **Viewing Photos**: Uploaded photos are displayed in a grid format with their assigned categories.
-3. **Deleting Photos**: Click the delete button below any photo to remove it from Firebase Storage and the database.
 
 ---
 
@@ -83,7 +79,6 @@ This app includes the following main components:
 - **CRUD Operations**: 
   - **Create**: Upload images to Firebase Storage.
   - **Read**: Fetch image URLs from Firestore for display.
-  - **Delete**: Remove images from both Firebase Storage and Firestore.
 
 ---
 

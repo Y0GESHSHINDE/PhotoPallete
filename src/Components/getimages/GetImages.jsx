@@ -10,7 +10,9 @@ function GetImages() {
     const imagesCollectionRef = collection(db, "users", user.uid, "images");
     const imagesQuery = query(imagesCollectionRef);
 
-    const unsubscribe = onSnapshot(imagesQuery,(snapshot) => {
+    const unsubscribe = onSnapshot(
+      imagesQuery,
+      (snapshot) => {
         const fetchedImages = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -42,9 +44,9 @@ function GetImages() {
                   className="card-img-top img-fluid"
                   style={{ height: "250px" }}
                 />
-                {/* <div className="card-body">
-                  <p className="card-text text-center">{user.email}</p>
-                </div> */}
+                <div className="card-body">
+                  <a href={image.url}  className="btn btn-dark form-control mt-2" target="_blank" >Download</a>
+                </div>
               </div>
             </div>
           ))
