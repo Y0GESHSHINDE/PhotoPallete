@@ -30,7 +30,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/PhotoPallete .git
+   git clone https://github.com/YOUR_USERNAME/PhotoPallete.git
    cd PhotoPallete 
    ```
 
@@ -46,12 +46,12 @@
    - Create a `.env` file at the root of your project and add the Firebase configuration:
 
    ```env
-   REACT_APP_API_KEY=your_api_key
-   REACT_APP_AUTH_DOMAIN=your_auth_domain
-   REACT_APP_PROJECT_ID=your_project_id
-   REACT_APP_STORAGE_BUCKET=your_storage_bucket
-   REACT_APP_MESSAGING_SENDER_ID=your_messaging_sender_id
-   REACT_APP_APP_ID=your_app_id
+   VITE_API_KEY=your_api_key
+   VITE_AUTH_DOMAIN=your_auth_domain
+   VITE_PROJECT_ID=your_project_id
+   VITE_STORAGE_BUCKET=your_storage_bucket
+   VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
+   VITE_APP_ID=your_app_id
    ```
 
 4. Start the development server:
@@ -85,8 +85,3 @@ This app includes the following main components:
 
 Contributions, issues, and feature requests are welcome! Feel free to check out the [issues page](https://github.com/YOUR_USERNAME/PhotoPallete /issues).
 
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
